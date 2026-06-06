@@ -1,15 +1,23 @@
-# 创建配置类，集中管理json、停用词路径
-class Config():
-    def __init__(self):
-        # 原始JSON数据源路径（项目只有json数据集）
-        self.train_json_path = "./train.jsonl"
-        self.test_json_path = "./test.jsonl"
-        # 停用词文件保留不变
-        self.stopwords_path = "./stopwords.txt"
-        # 不再定义train_datapath/dev_datapath/test_datapath(方案二不用txt)
+# 创建配置类，用于集中管理数据文件路径等
 
-# 配置测试
+class Config():
+    #初始化
+    def __init__(self):
+        # 训练集文件路径
+        self.train_datapath = './train.txt'
+        # 测试集文件路径
+        self.test_datapath = './test.txt'
+        # 验证集文件路径
+        self.dev_datapath = './dev.txt'
+        # 分类文件路径
+        self.class_path = './class.txt'
+        # 停用词路径
+        self.stopwords_path = './stopwords.txt'
+
+
+# 测试代码
 if __name__ == '__main__':
+    # 创建配置类对象
     conf = Config()
-    print("训练集json路径：", conf.train_json_path)
-    print("测试集json路径：", conf.test_json_path)
+    print(conf.train_datapath)
+    print(conf.test_datapath)
