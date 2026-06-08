@@ -6,3 +6,5 @@
 .idea/modules.xml
 .idea/contentModel.xml
 .env
+/03-fasttext/final_data/
+/03-fasttext/save_model/
